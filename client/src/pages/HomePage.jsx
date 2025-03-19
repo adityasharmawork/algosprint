@@ -275,7 +275,7 @@ export default function HomePage() {
                 TLE CP-Tracker
               </h1> */}
               <div>
-                    <h1 className='text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl'>TLE <span className='text-[#F83002]'>CP-Tracker</span></h1>
+                    <h1 className='text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl'>Algo <span className='text-[#F83002]'>Sprint</span></h1>
               </div>
               <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Track upcoming and past coding contests from Codeforces, CodeChef, and LeetCode. Never miss a contest again!
@@ -396,7 +396,7 @@ export default function HomePage() {
               Browse Contests
             </Link>
             <a
-              href="https://github.com/adityasharmawork/tle-new"
+              href="https://github.com/adityasharmawork/algosprint"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
