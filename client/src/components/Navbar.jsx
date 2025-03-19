@@ -19,7 +19,7 @@ export default function Navbar() {
             <Calendar className="h-5 w-5 mr-2 text-primary" />
             {/* <span>TLE CP-Tracker</span> */}
             <div>
-                    <h1 className='text-2xl font-bold'>TLE <span className='text-[#F83002]'>CP-Tracker</span></h1>
+                    <h1 className='text-2xl font-bold'>Algo <span className='text-[#F83002]'>Sprint</span></h1>
               </div>
           </Link>
           
