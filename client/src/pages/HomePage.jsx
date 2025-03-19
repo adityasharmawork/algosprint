@@ -54,7 +54,7 @@
 //                 Competitive Programming
 //               </div>
 //               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-//                 TLE CP-Tracker
+//                 AlgoSprint
 //               </h1>
 //               <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
 //                 Track upcoming and past coding contests from Codeforces, CodeChef, and LeetCode. Never miss a contest again!
@@ -272,7 +272,7 @@ export default function HomePage() {
                 Competitive Programming
               </div>
               {/* <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                TLE CP-Tracker
+                AlgoSprint
               </h1> */}
               <div>
                     <h1 className='text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl'>Algo <span className='text-[#F83002]'>Sprint</span></h1>

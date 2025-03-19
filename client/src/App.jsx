@@ -27,7 +27,7 @@ const App = () => {
         </main>
         {/* <footer className="py-6 border-t border-border">
           <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-            <p>TLE CP-Tracker &copy; {new Date().getFullYear()}</p>
+            <p>AlgoSprint &copy; {new Date().getFullYear()}</p>
           </div>
         </footer> */}
 

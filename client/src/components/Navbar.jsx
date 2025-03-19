@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link to="/" className="text-xl font-bold inline-flex items-center">
             <Calendar className="h-5 w-5 mr-2 text-primary" />
-            {/* <span>TLE CP-Tracker</span> */}
+            {/* <span>AlgoSprint</span> */}
             <div>
                     <h1 className='text-2xl font-bold'>Algo <span className='text-[#F83002]'>Sprint</span></h1>
               </div>
