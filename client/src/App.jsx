@@ -37,7 +37,7 @@ const App = () => {
           <div className="mb-4 md:mb-0">
             {/* <h2 className="text-xl font-bold">DevHunt</h2> */}
             <div className="font-thin">
-                    <p className='text-lg font-bold'>Algo <span className='text-[#F83002]'>Sprint</span> &copy; {new Date().getFullYear()}</p>
+                    <p className='text-lg font-bold'>Algo<span className='text-[#F83002]'>Sprint</span> &copy; {new Date().getFullYear()}</p>
             </div>
             <p className="text-sm"></p>
           </div>
