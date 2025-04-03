@@ -67,7 +67,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              to="/youtube"
+              to="/resources"
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive("/youtube") 
                   ? "bg-primary/10 text-primary" 
@@ -76,7 +76,7 @@ export default function Navbar() {
             >
               <span className="flex items-center">
                 <Youtube className="h-4 w-4 mr-1" />
-                YouTube Resources
+                Learning Resources
               </span>
             </Link>
             
