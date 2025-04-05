@@ -220,7 +220,7 @@
 
 
 import { Link } from "react-router-dom";
-import { ExternalLink, Calendar, ChevronRight, Filter, BookmarkCheck, Code } from "lucide-react";
+import { ExternalLink, Calendar, ChevronRight, Filter, BookmarkCheck, Code, Space } from "lucide-react";
 import { useState, useEffect } from "react";
 import { getUpcomingContests } from "../services/api";
 import LoadingSpinner from "../components/LoadingSpinner";
@@ -264,13 +264,14 @@ export default function HomePage() {
 
   return (
     <div className="animate-fade-in">
-      <section className="py-12 md:py-24">
+      <section className="py-14 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
-                Competitive Programming
+                No. #1 DSA/CP Contest Tracker
               </div>
+              <br /> <br />
               {/* <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
                 AlgoSprint
               </h1> */}
@@ -278,12 +279,15 @@ export default function HomePage() {
                     <h1 className='text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl'>Algo<span className='text-[#F83002]'>Sprint</span></h1>
               </div>
               <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Track upcoming and past coding contests from Codeforces, CodeChef, and LeetCode. Never miss a contest again!
+                Track upcoming and past coding contests from Codeforces, CodeChef, and LeetCode. 
+                <br /> <br />
+                <i>Never miss a contest again!</i>
+                <br /> <br /> <br />
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link
                   to="/upcoming"
-                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex mr-4 h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 >
                   Upcoming Contests
                 </Link>
@@ -295,7 +299,7 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="mx-auto max-w-[500px] lg:mx-0 lg:flex-1">
+            <div className="mx-auto max-w-[500px] lg:mx-28 w-full h-full lg:flex-1">
               <div className="rounded-xl bg-card border border-border p-6 shadow-lg">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-semibold">Next Contests</h3>
@@ -343,8 +347,83 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+
+
+
+      <section className="bg-secondary/50 py-14 w-full mt-10">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            
+            <div className="rounded-xl bg-card p-6 shadow-sm">
+              <img src="reviews1/ss1.png" alt="Review 1" />
+            </div>
+            
+            <div className="rounded-xl bg-card p-6 shadow-sm">
+              <img src="reviews1/ss2.png" alt="Review 2" />
+            </div>
+
+            <div className="rounded-xl bg-card p-6 shadow-sm">
+              <img src="reviews1/ss3.png" alt="Review 3" />
+            </div>
+
+            <div className="rounded-xl bg-card p-6 shadow-sm">
+              <img src="reviews1/ss4.png" alt="Review 4" />
+            </div>
+
+            <div className="rounded-xl bg-card p-6 shadow-sm">
+              <img src="reviews1/ss5.png" alt="Review 5" />
+            </div>
+
+            <div className="rounded-xl bg-card p-6 shadow-sm">
+              <img src="reviews1/ss6.png" alt="Review 6" />
+            </div>
+
+            <div className="rounded-xl bg-card p-6 shadow-sm">
+              <img src="reviews1/ss7.png" alt="Review 7" />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <section className="py-12 mt-16 mb-24 md:py-20">
+        <div className="container px-4 md:px-6 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter mb-2">
+            Review Us Now !!
+          </h2>
+          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+            It takes just 10 secs...
+          </p>
+          <div className="mt-8 flex flex-col gap-2 min-[400px]:flex-row justify-center">
+            <Link
+              to="https://feedback-io-beta.vercel.app//67f160900029347056e0/landing-page"
+              target="_blank"
+              className="inline-flex mr-4 h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            >
+              Review ❤️
+            </Link>
+            {/* <a
+              href="https://github.com/adityasharmawork/algosprint"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            >
+              <span className="mr-2">View on GitHub</span>
+              <ExternalLink className="h-4 w-4" />
+            </a> */}
+          </div>
+
+        </div>
+      </section>
+
+    
+
       
-      <section className="bg-secondary/50 py-12">
+      <section className="bg-secondary/50 py-14 w-full">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-xl bg-card p-6 shadow-sm">
@@ -379,19 +458,25 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+
+
       
       <section className="py-12 md:py-20">
         <div className="container px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6">
+            <br /> <br />
             Get Started Today
           </h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+            <br />
             Improve your competitive programming skills by participating in contests regularly.
+            <br /> <br />
           </p>
           <div className="mt-8 flex flex-col gap-2 min-[400px]:flex-row justify-center">
             <Link
               to="/upcoming"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex mr-4 h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             >
               Browse Contests
             </Link>
@@ -405,6 +490,10 @@ export default function HomePage() {
               <ExternalLink className="h-4 w-4" />
             </a>
           </div>
+
+          
+          <br />
+
         </div>
       </section>
     </div>
