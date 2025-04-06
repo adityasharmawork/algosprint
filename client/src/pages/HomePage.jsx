@@ -395,7 +395,7 @@ export default function HomePage() {
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
             It takes just 10 secs...
           </p>
-          <div className="mt-8 flex flex-col gap-4 w-full max-w-md mx-auto sm:flex-row sm:gap-4">
+          <div className="mt-8 justify-center flex flex-col gap-4 w-full max-w-md mx-auto sm:flex-row sm:gap-4">
             <Link
               to="https://feedback-io-beta.vercel.app//67f160900029347056e0/landing-page"
               target="_blank"
@@ -460,7 +460,7 @@ export default function HomePage() {
             Improve your competitive programming skills by participating in contests regularly.
             <br /> <br />
           </p>
-          <div className="mt-8 flex flex-col gap-4 w-full max-w-md mx-auto sm:flex-row sm:gap-4">
+          <div className="mt-8 justify-center flex flex-col gap-4 w-full max-w-md mx-auto sm:flex-row sm:gap-4">
             <Link
               to="/upcoming"
               className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
