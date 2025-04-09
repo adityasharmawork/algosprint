@@ -886,7 +886,7 @@ export default function LearningResources() {
         <div className="overflow-x-auto pb-3">
           <TabsList className="w-full flex min-w-max space-x-1 sm:grid sm:grid-cols-5">
             <TabsTrigger className="flex-1 px-1 sm:px-3 text-xs sm:text-sm whitespace-nowrap" value="contest-solutions">Contest Solutions</TabsTrigger>
-            <TabsTrigger className="flex-1 px-1 sm:px-3 text-xs sm:text-sm whitespace-nowrap" value="cp-sheet">CP-31 Sheet</TabsTrigger>
+            <TabsTrigger className="flex-1 px-1 sm:px-3 text-xs sm:text-sm whitespace-nowrap" value="cp-sheet">DSA Sheets</TabsTrigger>
             <TabsTrigger className="flex-1 px-1 sm:px-3 text-xs sm:text-sm whitespace-nowrap" value="beginner">Language Basics</TabsTrigger>
             <TabsTrigger className="flex-1 px-1 sm:px-3 text-xs sm:text-sm whitespace-nowrap" value="intermediate">DSA Playlist</TabsTrigger>
             <TabsTrigger className="flex-1 px-1 sm:px-3 text-xs sm:text-sm whitespace-nowrap" value="advanced">Advanced Algorithms</TabsTrigger>
