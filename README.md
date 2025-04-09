@@ -12,7 +12,7 @@ AlgoSprint is a **Contest Tracking Web Application** built using the **MERN stac
 ## Project Walkthrough 
 
 ### Video 
-- https://drive.google.com/file/d/1ZRmLBjmub4z4E9exHmZEXbdzgq9r0FDG/view?usp=sharing
+- https://drive.google.com/file/d/16m3HYM5KkAs97wTsYviVqn1k7dsYU2gb/view?usp=sharing
 
 ---
 ## 🌟 Features
