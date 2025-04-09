@@ -60,8 +60,8 @@ AlgoSprint is a **Contest Tracking Web Application** built using the **MERN stac
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/adityasharmawork/tle-new
-cd tle-new
+git clone https://github.com/adityasharmawork/algosprint
+cd algosprint
 ```
 
 ### 2️⃣ Install Dependencies
