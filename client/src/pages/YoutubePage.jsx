@@ -720,6 +720,27 @@ export default function LearningResources() {
     }
   ];
 
+  const striverSheetResources = [
+    {
+      title: "Striver's A2Z DSA Sheet",
+      description: "Learn DSA from A to Z for free in a well-organized and structured manner",
+      url: "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      icon: FileText
+    },
+    {
+      title: "Striver's SDE Sheet",
+      description: "Contains very handily crafted and picked top coding interview questions from different topics",
+      url: "https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems",
+      icon: FileText
+    },
+    {
+      title: "Striver's 79 Last Moment DSA Sheet",
+      description: "Contains very handily crafted and picked top coding interview questions from different topics",
+      url: "https://takeuforward.org/interview-sheets/strivers-79-last-moment-dsa-sheet-ace-interviews",
+      icon: FileText
+    }
+  ];
+
   // New resources for Beginner, Intermediate, and Advanced tabs
   const beginnerResources = [
     {
@@ -914,6 +935,36 @@ export default function LearningResources() {
               {cpSheetSolutions.map(renderPlaylistCard)}
             </div>
           </div>
+
+          <div className="mb-8 mt-10">
+            <h2 className="text-xl font-medium mb-4">Striver's Sheet Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {striverSheetResources.map((resource) => (
+                <Card key={resource.title} className="flex flex-col h-full hover:shadow-md transition-shadow">
+                  <CardHeader className="pb-2">
+                    <div className="flex items-center space-x-2">
+                      <resource.icon className="h-5 w-5 text-primary" />
+                      <CardTitle className="text-lg">{resource.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pb-4 flex-grow">
+                    <p className="text-muted-foreground text-sm">{resource.description}</p>
+                  </CardContent>
+                  <CardFooter className="pt-0">
+                    <Button 
+                      variant="outline" 
+                      className="w-full hover:border-primary hover:text-primary"
+                      onClick={() => window.open(resource.url, '_blank', 'noopener,noreferrer')}
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Open Resource
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          </div>
+
         </TabsContent>
 
         <TabsContent value="beginner" className="mt-6">
