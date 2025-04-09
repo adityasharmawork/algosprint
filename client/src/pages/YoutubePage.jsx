@@ -696,29 +696,41 @@ export default function LearningResources() {
       icon: FileText
     },
     {
-      title: "CP-31 Sheet Launch Video",
-      description: "Introduction to the CP-31 methodology and approach",
-      url: "https://youtu.be/jzzjTa3z9xE?si=zsURTu2XEktvrRif",
-      icon: PlaySquare
-    }
-  ];
-
-  const cpSheetSolutions = [
-    {
       title: "800 Rated Problems Solutions",
       description: "Video solutions for beginner-level CP-31 Sheet problems",
       url: "https://youtube.com/playlist?list=PLcXpkI9A-RZLDpszcEU9e7gpimdZwe1B_&si=dd5QzIPL1U8xMKnz",
-      color: "bg-blue-500/10 text-blue-500",
-      level: "Beginner"
+      icon: FileText
     },
     {
       title: "900 Rated Problems Solutions",
       description: "Video solutions for intermediate CP-31 Sheet problems",
       url: "https://youtube.com/playlist?list=PLcXpkI9A-RZJ_ISNA7Ym6-76GUpw9O11R&si=d-YWe8DzMFYMjSLD",
-      color: "bg-purple-500/10 text-purple-500",
-      level: "Intermediate"
+      icon: FileText
     }
+    // {
+    //   title: "CP-31 Sheet Launch Video",
+    //   description: "Introduction to the CP-31 methodology and approach",
+    //   url: "https://youtu.be/jzzjTa3z9xE?si=zsURTu2XEktvrRif",
+    //   icon: PlaySquare
+    // }
   ];
+
+  // const cpSheetSolutions = [
+  //   {
+  //     title: "800 Rated Problems Solutions",
+  //     description: "Video solutions for beginner-level CP-31 Sheet problems",
+  //     url: "https://youtube.com/playlist?list=PLcXpkI9A-RZLDpszcEU9e7gpimdZwe1B_&si=dd5QzIPL1U8xMKnz",
+  //     color: "bg-blue-500/10 text-blue-500",
+  //     level: "Beginner"
+  //   },
+  //   {
+  //     title: "900 Rated Problems Solutions",
+  //     description: "Video solutions for intermediate CP-31 Sheet problems",
+  //     url: "https://youtube.com/playlist?list=PLcXpkI9A-RZJ_ISNA7Ym6-76GUpw9O11R&si=d-YWe8DzMFYMjSLD",
+  //     color: "bg-purple-500/10 text-purple-500",
+  //     level: "Intermediate"
+  //   }
+  // ];
 
   const striverSheetResources = [
     {
@@ -746,6 +758,12 @@ export default function LearningResources() {
       title: "Apna College DSA Sheet",
       description: "Learn DSA from Apna College curated DSA Sheet",
       url: "https://docs.google.com/spreadsheets/d/1mvlc8EYc3OVVU3X7NKoC0iZJr_45BL_pVxiJec0r94c/edit?gid=0#gid=0",
+      icon: FileText
+    },
+    {
+      title: "Apna College DSA Playlist",
+      description: "Video solutions for intermediate CP-31 Sheet problems",
+      url: "https://www.youtube.com/playlist?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt",
       icon: FileText
     }
   ];
@@ -938,12 +956,12 @@ export default function LearningResources() {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <h2 className="text-xl font-medium mb-4">CP-31 Sheet Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {cpSheetSolutions.map(renderPlaylistCard)}
             </div>
-          </div>
+          </div> */}
 
           <div className="mb-8 mt-10">
             <h2 className="text-xl font-medium mb-4">Striver's Sheet Resources</h2>
