@@ -388,6 +388,14 @@ export default function HomePage() {
               <img src="reviews1/ss9.png" alt="Review 9" />
             </div>
 
+            <div className="rounded-xl bg-card p-6 shadow-sm">
+              <img src="reviews1/ss10.png" alt="Review 10" />
+            </div>
+
+            <div className="rounded-xl bg-card p-6 shadow-sm">
+              <img src="reviews1/ss11.png" alt="Review 11" />
+            </div>
+
           </div>
         </div>
       </section>
