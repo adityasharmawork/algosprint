@@ -703,8 +703,14 @@ export default function LearningResources() {
     },
     {
       title: "900 Rated Problems Solutions",
-      description: "Video solutions for intermediate CP-31 Sheet problems",
+      description: "Video solutions for beginner-leve CP-31 Sheet problems",
       url: "https://youtube.com/playlist?list=PLcXpkI9A-RZJ_ISNA7Ym6-76GUpw9O11R&si=d-YWe8DzMFYMjSLD",
+      icon: FileText
+    },
+    {
+      title: "1000 Rated Problems Solutions",
+      description: "Video solutions for intermediate CP-31 Sheet problems",
+      url: "https://www.youtube.com/playlist?list=PLcXpkI9A-RZK5yv-kZFkSROuRfDlkZ9Sj",
       icon: FileText
     }
     // {
