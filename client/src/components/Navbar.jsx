@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Calendar, Clock, BookmarkCheck, ShieldCheck, Home, Youtube, X } from "lucide-react";
+import { Calendar, Clock, BookmarkCheck, ShieldCheck, Home, Youtube, X, Code } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useState, useEffect } from "react";
 
@@ -126,6 +126,22 @@ export default function Navbar() {
                 Admin
               </span>
             </Link>
+
+            <a
+              href="https://replix.co.in/editor"
+              target="_blank"
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors`}
+              // className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              //   isActive("/admin") 
+              //     ? "bg-primary/10 text-primary" 
+              //     : "text-foreground hover:bg-secondary"
+              // }`}
+            >
+              <span className="flex items-center">
+                <Code className="h-4 w-4 mr-1" />
+                Online IDE
+              </span>
+            </a>
           </nav>
           
           <div className="flex items-center">
