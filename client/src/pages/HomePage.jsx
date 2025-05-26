@@ -33,11 +33,9 @@ export default function HomePage() {
     fetchContests();
   }, []);
 
-  // Create a separate effect for the feedback wall to isolate it
   useEffect(() => {
     if (!feedbackContainerRef.current) return;
     
-    // Create an iframe to isolate the feedback widget
     const iframe = document.createElement('iframe');
     iframe.style.width = '100%';
     iframe.style.height = '600px';
@@ -46,7 +44,6 @@ export default function HomePage() {
     
     feedbackContainerRef.current.appendChild(iframe);
     
-    // Write the feedback wall HTML to the iframe
     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
     iframeDoc.open();
     iframeDoc.write(`
@@ -166,7 +163,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* REVIEWS SECTION - Now using an iframe to isolate the widget */}
       <section className="bg-secondary/50 py-14 w-full mt-10">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter mb-6 text-center">User Reviews</h2>

@@ -89,25 +89,19 @@ export default function UpcomingContests() {
 
 
   useEffect(() => {
-     // Apply platform filters and search query
      if (contests.length > 0) {
-      // Apply platform filtering
       let filtered = contests.filter(contest => {
         const platform = contest.platform.toLowerCase();
         return platforms[platform] === true;
       });
       
-      // Apply search filtering if there's a search query
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
         filtered = filtered.filter(contest => {
-          // Search in name
           if (contest.name.toLowerCase().includes(query)) return true;
           
-          // Search in platform
           if (contest.platform.toLowerCase().includes(query)) return true;
           
-          // Search in date
           const date = new Date(contest.startTime).toLocaleDateString();
           if (date.toLowerCase().includes(query)) return true;
           
@@ -115,7 +109,6 @@ export default function UpcomingContests() {
         });
       }
       
-      // Sort by start time
       filtered.sort((a, b) => new Date(a.startTime) - new Date(b.startTime));
       
       setFilteredContests(filtered);

@@ -3,7 +3,6 @@ import { Calendar, Clock, ExternalLink, Bookmark, BookmarkCheck, Info } from "lu
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
 
-// Format relative time in a human-readable way
 const formatTimeRemaining = (startTime) => {
   const now = new Date().getTime();
   const start = new Date(startTime).getTime();
@@ -24,19 +23,15 @@ const formatTimeRemaining = (startTime) => {
   }
 };
 
-// Get the platform badge class
 const getPlatformBadgeClass = (platform) => {
   const platformLower = platform.toLowerCase();
   return `platform-badge platform-badge-${platformLower}`;
 };
 
-// Generate a unique key for a contest
 const getContestUniqueKey = (contest) => {
   if (contest.platform.toLowerCase() === 'leetcode') {
-    // Use name for LeetCode contests since they might not have stable IDs
     return `${contest.platform}-${contest.name}`;
   } else {
-    // Use ID or code for Codeforces and CodeChef
     return `${contest.platform}-${contest.id || contest.code}`;
   }
 };
@@ -47,14 +42,12 @@ export default function ContestCard({ contest, isPast = false, solution = null, 
   const [showDialog, setShowDialog] = useState(false);
   
   useEffect(() => {
-    // Check if this contest is bookmarked
     const bookmarks = JSON.parse(localStorage.getItem("bookmarkedContests") || "[]");
     const isAlreadyBookmarked = bookmarks.some(
       b => getContestUniqueKey(b) === getContestUniqueKey(contest)
     );
     setIsBookmarked(isAlreadyBookmarked);
     
-    // Only update the timer for upcoming contests
     if (!isPast) {
       setTimeRemaining(formatTimeRemaining(contest.startTime));
       
@@ -70,7 +63,6 @@ export default function ContestCard({ contest, isPast = false, solution = null, 
     const newBookmarkState = !isBookmarked;
     setIsBookmarked(newBookmarkState);
     
-    // Update localStorage
     const bookmarks = JSON.parse(localStorage.getItem("bookmarkedContests") || "[]");
     
     if (newBookmarkState) {
@@ -84,7 +76,6 @@ export default function ContestCard({ contest, isPast = false, solution = null, 
     
     localStorage.setItem("bookmarkedContests", JSON.stringify(bookmarks));
     
-    // Call the onBookmark handler if provided
     if (onBookmark) onBookmark(contest, newBookmarkState);
   };
   

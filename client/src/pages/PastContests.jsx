@@ -96,25 +96,19 @@ export default function PastContests() {
 
 
   useEffect(() => {
-     // Apply platform filters and search query
      if (contests.length > 0) {
-      // Apply platform filtering
       let filtered = contests.filter(contest => {
         const platform = contest.platform.toLowerCase();
         return platforms[platform] === true;
       });
       
-      // Apply search filtering if there's a search query
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
         filtered = filtered.filter(contest => {
-          // Search in name
           if (contest.name.toLowerCase().includes(query)) return true;
           
-          // Search in platform
           if (contest.platform.toLowerCase().includes(query)) return true;
           
-          // Search in date
           const date = new Date(contest.startTime).toLocaleDateString();
           if (date.toLowerCase().includes(query)) return true;
           
@@ -122,7 +116,6 @@ export default function PastContests() {
         });
       }
       
-      // Sort by start time (newest first for past contests)
       filtered.sort((a, b) => new Date(b.startTime) - new Date(a.startTime));
       
       setFilteredContests(filtered);
@@ -143,11 +136,9 @@ export default function PastContests() {
     setSearchQuery(query);
   };
 
-  // Find a solution for a given contest
   const findSolution = (contest) => {
     const solution = solutions.find(
       s => {
-        // Match by the unique key where possible
         const contestKey = getContestUniqueKey(contest);
         const solutionKey = s.platform + '-' + (s.id || s.code || s.name);
         return contestKey === solutionKey;

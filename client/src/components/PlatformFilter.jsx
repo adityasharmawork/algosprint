@@ -8,7 +8,6 @@ export default function PlatformFilter({ onChange, initialSelected }) {
     leetcode: true
   });
   
-  // Initialize with prop values if provided
   useEffect(() => {
     if (initialSelected) {
       setSelected(initialSelected);
@@ -23,7 +22,6 @@ export default function PlatformFilter({ onChange, initialSelected }) {
     
     setSelected(newSelected);
     
-    // Call the onChange handler with the updated selection
     onChange(newSelected);
   };
   

@@ -18,11 +18,9 @@ export default function BookmarkedContests() {
   };
   
   useEffect(() => {
-    // Load bookmarks from localStorage
     const loadBookmarks = () => {
       const bookmarks = JSON.parse(localStorage.getItem("bookmarkedContests") || "[]");
       
-      // Ensure we have no duplicates
       const uniqueBookmarks = [];
       const seen = new Set();
       
@@ -39,7 +37,6 @@ export default function BookmarkedContests() {
     
     loadBookmarks();
     
-    // Add event listener for storage changes (for cross-tab sync)
     window.addEventListener("storage", loadBookmarks);
     
     return () => {
@@ -49,7 +46,6 @@ export default function BookmarkedContests() {
   
   const handleBookmarkChange = (contest, isBookmarked) => {
     if (!isBookmarked) {
-      // Remove the contest from the list when un-bookmarked
       const contestKey = getContestUniqueKey(contest);
       setBookmarkedContests(prev => 
         prev.filter(c => getContestUniqueKey(c) !== contestKey)
@@ -57,7 +53,6 @@ export default function BookmarkedContests() {
     }
   };
   
-  // Sort contests by start time
   const sortedContests = [...bookmarkedContests].sort((a, b) => {
     const dateA = new Date(a.startTime).getTime();
     const dateB = new Date(b.startTime).getTime();

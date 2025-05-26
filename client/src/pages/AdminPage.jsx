@@ -57,7 +57,6 @@ export default function AdminPage() {
   }, []);
 
   useEffect(() => {
-    // Filter contests by selected platform
     if (contests.length > 0) {
       if (selectedPlatform === "all") {
         setFilteredContests(contests);
@@ -68,12 +67,10 @@ export default function AdminPage() {
         setFilteredContests(filtered);
       }
       
-      // Reset selected contest when platform changes
       setSelectedContest("");
     }
   }, [selectedPlatform, contests]);
 
-  // Get the selected contest object
   const getSelectedContestObj = () => {
     if (!selectedContest) return null;
     return contests.find(c => 
@@ -81,7 +78,6 @@ export default function AdminPage() {
     );
   };
 
-  // Get existing solution for the selected contest
   const getExistingSolution = () => {
     const contest = getSelectedContestObj();
     if (!contest) return null;
@@ -91,11 +87,9 @@ export default function AdminPage() {
     );
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Reset messages
     setSuccessMessage("");
     setErrorMessage("");
     
@@ -111,7 +105,6 @@ export default function AdminPage() {
     }
     
     try {
-      // Save the solution
       await saveSolution({
         id: contest.id,
         code: contest.code,
@@ -120,14 +113,11 @@ export default function AdminPage() {
         youtubeLink
       });
       
-      // Update the solutions list
       const updatedSolutions = await getSolutions();
       setSolutions(updatedSolutions);
       
-      // Show success message
       setSuccessMessage("Solution link saved successfully!");
       
-      // Reset the form
       setYoutubeLink("");
       setSelectedContest("");
     } catch (err) {
@@ -137,7 +127,6 @@ export default function AdminPage() {
   };
 
   useEffect(() => {
-    // Check if there's already a solution for this contest
     const existingSolution = getExistingSolution();
     if (existingSolution) {
       setYoutubeLink(existingSolution.youtubeLink);
@@ -151,37 +140,29 @@ export default function AdminPage() {
 
 
 
-    // Start editing a solution
     const handleEdit = (solution) => {
       setEditingSolution(solution);
     };
   
-    // Cancel editing
     const handleCancelEdit = () => {
       setEditingSolution(null);
     };
   
-    // Save edited solution
     const handleSaveEdit = async (solution, newLink) => {
       try {
-        // Reset messages
         setSuccessMessage("");
         setErrorMessage("");
         
-        // Update the solution
         await saveSolution({
           ...solution,
           youtubeLink: newLink
         });
         
-        // Update the solutions list
         const updatedSolutions = await getSolutions();
         setSolutions(updatedSolutions);
         
-        // Cancel editing mode
         setEditingSolution(null);
         
-        // Show success message
         setSuccessMessage("Solution link updated successfully!");
       } catch (err) {
         console.error("Failed to update solution:", err);
@@ -189,22 +170,17 @@ export default function AdminPage() {
       }
     };
   
-    // Delete a solution
     const handleDelete = async (solution) => {
       if (window.confirm("Are you sure you want to delete this solution?")) {
         try {
-          // Reset messages
           setSuccessMessage("");
           setErrorMessage("");
           
-          // Delete the solution
           await deleteSolution(solution);
           
-          // Update the solutions list
           const updatedSolutions = await getSolutions();
           setSolutions(updatedSolutions);
           
-          // Show success message
           setSuccessMessage("Solution deleted successfully!");
         } catch (err) {
           console.error("Failed to delete solution:", err);
