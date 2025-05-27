@@ -8,7 +8,7 @@ import BookmarkedContests from "./pages/BookmarkedContests";
 import AdminPage from "./pages/AdminPage";
 import NotFound from "./pages/NotFound";
 // import YouTubeResources from "./pages/YoutubePage";
-import LearningResources from "./pages/YoutubePage";
+import LearningResources from "./pages/LearningResourcesPage";
 
 const App = () => {
   return (
