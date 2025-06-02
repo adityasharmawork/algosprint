@@ -718,6 +718,12 @@ export default function LearningResources() {
       description: "Video solutions for intermediate CP-31 Sheet problems",
       url: "https://www.youtube.com/playlist?list=PLcXpkI9A-RZIpZs9Oq8tkuzc-_blEjCr1",
       icon: FileText
+    },
+    {
+      title: "1200 Rated Problems Solutions",
+      description: "Video solutions for intermediate CP-31 Sheet problems",
+      url: "https://www.youtube.com/playlist?list=PLcXpkI9A-RZK3SIn1r2g3M8PPrpLmABXP",
+      icon: FileText
     }
     // {
     //   title: "CP-31 Sheet Launch Video",
