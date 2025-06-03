@@ -651,10 +651,6 @@
 
 
 
-
-
-
-
 import { useState } from "react";
 import { ExternalLink, PlaySquare, FileText, Youtube, BookOpen, Code, Terminal } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
