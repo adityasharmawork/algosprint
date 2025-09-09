@@ -705,7 +705,7 @@ export default function LearningResources() {
     },
     {
       title: "1000 Rated Problems Solutions",
-      description: "Video solutions for intermediate CP-31 Sheet problems",
+      description: "Video solutions for beginner-level CP-31 Sheet problems",
       url: "https://www.youtube.com/playlist?list=PLcXpkI9A-RZK5yv-kZFkSROuRfDlkZ9Sj",
       icon: FileText
     },
