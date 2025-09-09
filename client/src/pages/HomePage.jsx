@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import { getUpcomingContests } from "../services/api";
 import LoadingSpinner from "../components/LoadingSpinner";
 import ErrorMessage from "../components/ErrorMessage";
+import FeedbackWall from "../components/FeedbackWall";
 
 export default function HomePage() {
   const [recentContests, setRecentContests] = useState([]);
@@ -33,42 +34,42 @@ export default function HomePage() {
     fetchContests();
   }, []);
 
-  useEffect(() => {
-    if (!feedbackContainerRef.current) return;
+  // useEffect(() => {
+  //   if (!feedbackContainerRef.current) return;
     
-    const iframe = document.createElement('iframe');
-    iframe.style.width = '100%';
-    iframe.style.height = '600px';
-    iframe.style.border = 'none';
-    iframe.title = "User Feedback";
+  //   const iframe = document.createElement('iframe');
+  //   iframe.style.width = '100%';
+  //   iframe.style.height = '600px';
+  //   iframe.style.border = 'none';
+  //   iframe.title = "User Feedback";
     
-    feedbackContainerRef.current.appendChild(iframe);
+  //   feedbackContainerRef.current.appendChild(iframe);
     
-    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-    iframeDoc.open();
-    iframeDoc.write(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Feedback</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ArnabChatterjee20k/feedbackio-widget@master/wall-of-fame-cdn/wall-style.css">
-      </head>
-      <body>
-        <div id="feedbackio-wall-of-fame" data-spaceid="67f160900029347056e0"></div>
-        <script type="module" src="https://cdn.jsdelivr.net/gh/ArnabChatterjee20k/feedbackio-widget@latest/wall-of-fame-cdn/wall-bundle.js"></script>
-      </body>
-      </html>
-    `);
-    iframeDoc.close();
+  //   const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+  //   iframeDoc.open();
+  //   iframeDoc.write(`
+  //     <!DOCTYPE html>
+  //     <html lang="en">
+  //     <head>
+  //       <meta charset="UTF-8">
+  //       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  //       <title>Feedback</title>
+  //       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ArnabChatterjee20k/feedbackio-widget@master/wall-of-fame-cdn/wall-style.css">
+  //     </head>
+  //     <body>
+  //       <div id="feedbackio-wall-of-fame" data-spaceid="67f160900029347056e0"></div>
+  //       <script type="module" src="https://cdn.jsdelivr.net/gh/ArnabChatterjee20k/feedbackio-widget@latest/wall-of-fame-cdn/wall-bundle.js"></script>
+  //     </body>
+  //     </html>
+  //   `);
+  //   iframeDoc.close();
     
-    return () => {
-      if (feedbackContainerRef.current && feedbackContainerRef.current.contains(iframe)) {
-        feedbackContainerRef.current.removeChild(iframe);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (feedbackContainerRef.current && feedbackContainerRef.current.contains(iframe)) {
+  //       feedbackContainerRef.current.removeChild(iframe);
+  //     }
+  //   };
+  // }, []);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -163,7 +164,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 py-14 w-full mt-10">
+      {/* <section className="bg-secondary/50 py-14 w-full mt-10">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter mb-6 text-center">User Reviews</h2>
           <div 
@@ -171,9 +172,15 @@ export default function HomePage() {
             className="feedback-container rounded-xl overflow-hidden"
           ></div>
         </div>
-      </section>
+      </section> */}
       
 
+
+      <section className="bg-secondary/50 py-14 w-full mt-10">
+        <div className="container px-4 md:px-6">
+          <FeedbackWall />
+        </div>
+      </section>
 
 
       <section className="py-12 mt-16 mb-24 md:py-20">
@@ -195,6 +202,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+
+      {/* <section className="bg-secondary/50 py-14 w-full mt-10">
+      <div className="container px-4 md:px-6">
+        <FeedbackWall />
+      </div>
+    </section> */}
+
 
       <section className="bg-secondary/50 py-14 w-full">
         <div className="container px-4 md:px-6">
