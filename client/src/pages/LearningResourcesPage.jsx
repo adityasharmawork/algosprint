@@ -815,6 +815,13 @@ export default function LearningResources() {
       url: "https://maang.in/courses/AZ101-Master-Python-For-Data-Structures-and-Algorithms-165",
       icon: BookOpen,
       color: "bg-blue-500/10 text-blue-500"
+    },
+    {
+      title: "AZ101 Java Course",
+      description: "Master Java For Data Structures and Algorithms",
+      url: "https://maang.in/courses/AZ101-Master-Java-For-Data-Structures-and-Algorithms-193",
+      icon: BookOpen,
+      color: "bg-blue-500/10 text-blue-500"
     }
   ];
 
