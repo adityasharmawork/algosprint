@@ -808,6 +808,13 @@ export default function LearningResources() {
       url: "https://maang.in/courses/AZ101-Master-C-For-Data-Structures-and-Algorithms-67",
       icon: BookOpen,
       color: "bg-blue-500/10 text-blue-500"
+    },
+    {
+      title: "AZ101 Python Course",
+      description: "Master Python For Data Structures and Algorithms",
+      url: "https://maang.in/courses/AZ101-Master-Python-For-Data-Structures-and-Algorithms-165",
+      icon: BookOpen,
+      color: "bg-blue-500/10 text-blue-500"
     }
   ];
 
