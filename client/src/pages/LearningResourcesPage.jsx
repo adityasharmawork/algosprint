@@ -803,7 +803,7 @@ export default function LearningResources() {
   // New resources for Beginner, Intermediate, and Advanced tabs
   const beginnerResources = [
     {
-      title: "AZ101 Course",
+      title: "AZ101 C++ Course",
       description: "Master C++ For Data Structures and Algorithms",
       url: "https://maang.in/courses/AZ101-Master-C-For-Data-Structures-and-Algorithms-67",
       icon: BookOpen,
