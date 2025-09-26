@@ -824,6 +824,7 @@ export default function LearningResources() {
       color: "bg-blue-500/10 text-blue-500"
     }
   ];
+  
 
   const intermediateResources = [
     {
