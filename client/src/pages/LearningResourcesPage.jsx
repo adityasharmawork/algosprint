@@ -823,6 +823,8 @@ export default function LearningResources() {
       icon: BookOpen,
       color: "bg-blue-500/10 text-blue-500"
     }
+
+    
   ];
   
 
